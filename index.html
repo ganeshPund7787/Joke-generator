@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke generator .com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3><i class="fa-regular fa-face-grin-tears"></i></h3>
+        <div class="box">Click Button To generator  the Joke</div>
+        <button type="button" id="joke-btn">Jock Generator </button>
+    </div>
+
+    <script>
+        const box = document.querySelector(".box");
+        const btn = document.querySelector("#joke-btn");
+
+        btn.addEventListener( "click" , () => {
+            fetch(`https://official-joke-api.appspot.com/random_joke`)
+            .then(responce => responce.json())
+            .then((data) => {
+                box.innerHTML = `${data.setup} <br> ${data.punchline}`;
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.container {
+    height: 28vmax;
+    width: 40vmax;
+    border: 2px solid black;
+    background: hsla(317, 100%, 50%, 0.654);
+    border-radius: 1em;
+    text-align: center;
+}
+
+span {
+    display: none;
+}
+
+.box {
+    height: 8vmax;
+    width: 92%;
+    font-size: 2vmax;
+    margin-bottom: 1em;
+    border: 3px dashed rgb(26, 25, 25);
+    padding: 3%;
+    color: yellow;
+}
+
+h3 i {
+    font-size: 4vmax;
+    color: rgba(255, 255, 0, 0.756);
+}
+
+button {
+    padding: 1em;
+    border-radius: 1.5em;
+    background-color: orangered;
+    border: none;
+    text-shadow: 1px 1px 15px yellow;
+}
